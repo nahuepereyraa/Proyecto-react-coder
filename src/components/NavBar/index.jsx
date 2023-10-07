@@ -1,19 +1,31 @@
 import React from "react";
+import CartWidget from "../CartWidget"
 
 export const NavBar = () => {
     return (
-        <nav className="navbar">
-            <div className="container">
-                <h1>Inicio</h1>
-                <ul className="nav-links">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/productos">Productos</a></li>
-                    <li><a href="/acerca-de">Acerca de</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
+<div className="container">
+    <nav className="nav"> 
+        <div className="nav_brand">
+            <a className="nav_link" href="#">MyBrand</a>
+        </div>
+        <ul className="nav_list">
+        <li>
+            <a className="nav_link" href="#">Remeras</a>
+        </li>
+        <li>
+            <a className="nav_link" href="#">Pantalones</a>
+        </li>
+        <li>
+            <a className="nav_link" href="#">
+                <CartWidget />
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
     );
+
 }
 
 export default NavBar;
